@@ -24,7 +24,11 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 " terminal
 Plug 'voldikss/vim-floaterm'
+" tmux integration
+Plug 'christoomey/vim-tmux-navigator'
 call plug#end()
+
+set number
 
 " General settings
 
@@ -74,7 +78,7 @@ vnoremap <C-k> :m '<-2<CR>gv=gv
 " Wintab navigate
 map <C-h> <Plug>(wintabs_previous)
 map <C-l> <Plug>(wintabs_next)
-map <C-w> <Plug>(wintabs_close)
+" map <C-w> <Plug>(wintabs_close)
 " Floaterm
 nnoremap   <silent>   <C-j>   :FloatermToggle<CR>
 tnoremap   <silent>   <C-j>   <C-\><C-n>:FloatermToggle<CR>
