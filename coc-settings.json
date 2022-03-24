@@ -7,5 +7,6 @@
     "javascriptreact",
     "typescriptreact",
     "json"
-  ]
+  ],
+  "css.lint.unknownAtRules": "ignore"
 }

@@ -38,6 +38,7 @@ let g:airline_theme='one'
 command! -nargs=0 Prettier :CocCommand prettier.formatFile
 
 let g:coc_global_extensions = [
+  \ 'coc-tailwindcss',
   \ 'coc-tsserver',
   \ 'coc-toml',
   \ 'coc-svg',
