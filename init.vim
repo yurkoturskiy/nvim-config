@@ -22,6 +22,9 @@ Plug 'voldikss/vim-floaterm'
 " fzf
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
+" telescope
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-telescope/telescope.nvim'
 " terminal
 Plug 'voldikss/vim-floaterm'
 " tmux integration
@@ -76,15 +79,21 @@ inoremap <C-k> <Esc>:m .-2<CR>==gi
 vnoremap <C-j> :m '>+1<CR>gv=gv
 vnoremap <C-k> :m '<-2<CR>gv=gv
 " Wintab navigate
-map <C-h> <Plug>(wintabs_previous)
-map <C-l> <Plug>(wintabs_next)
+map <S-h> <Plug>(wintabs_previous)
+map <S-l> <Plug>(wintabs_next)
 " map <C-w> <Plug>(wintabs_close)
 " Floaterm
-nnoremap   <silent>   <C-j>   :FloatermToggle<CR>
-tnoremap   <silent>   <C-j>   <C-\><C-n>:FloatermToggle<CR>
+nnoremap   <silent>   <leader>j   :FloatermToggle<CR>
+tnoremap   <silent>   <leader>j   <C-\><C-n>:FloatermToggle<CR>
 " FZF
 nmap <C-p> :GFiles<CR>
 nmap <leader>s :Rg<CR>
+" Telescope
+" Using Lua functions
+nnoremap <leader>ff <cmd>lua require('telescope.builtin').find_files()<cr>
+nnoremap <leader>fg <cmd>lua require('telescope.builtin').live_grep()<cr>
+nnoremap <leader>fb <cmd>lua require('telescope.builtin').buffers()<cr>
+nnoremap <leader>fh <cmd>lua require('telescope.builtin').help_tags()<cr>
 
 """"""""""""""""
 " HIGHLIGHTING "
