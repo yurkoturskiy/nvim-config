@@ -1,6 +1,7 @@
 call plug#begin('~/AppData/Local/nvim/plugged')
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'ryanoasis/vim-devicons'
+Plug 'github/copilot.vim'
 " Git
 Plug 'tpope/vim-fugitive'
 " Statusline/tablines
