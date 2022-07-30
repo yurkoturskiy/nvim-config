@@ -82,7 +82,7 @@ vnoremap <C-k> :m '<-2<CR>gv=gv
 " Wintab navigate
 map <S-h> <Plug>(wintabs_previous)
 map <S-l> <Plug>(wintabs_next)
-" map <C-w> <Plug>(wintabs_close)
+map <S-w> <Plug>(wintabs_close)
 " Floaterm
 nnoremap   <silent>   <leader>j   :FloatermToggle<CR>
 tnoremap   <silent>   <leader>j   <C-\><C-n>:FloatermToggle<CR>
