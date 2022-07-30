@@ -96,6 +96,10 @@ nnoremap <leader>fg <cmd>lua require('telescope.builtin').live_grep()<cr>
 nnoremap <leader>fb <cmd>lua require('telescope.builtin').buffers()<cr>
 nnoremap <leader>fh <cmd>lua require('telescope.builtin').help_tags()<cr>
 
+"LF
+let g:lf_map_keys = 0
+map <leader>k :Lf<CR>
+
 """"""""""""""""
 " HIGHLIGHTING "
 """"""""""""""""
