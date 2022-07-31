@@ -1,4 +1,5 @@
 call plug#begin('~/AppData/Local/nvim/plugged')
+Plug 'neovim/nvim-lspconfig'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'ryanoasis/vim-devicons'
 Plug 'github/copilot.vim'
@@ -112,3 +113,5 @@ highlight link CocErrorHighlight Error
 highlight CocHintHighlight ctermfg=Red  guifg=Red
 " Tabline
 highlight TablineFill ctermfg=59 ctermbg=17 guifg=#748CB7 guibg=#3e4452
+
+lua require("basic")
