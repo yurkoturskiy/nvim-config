@@ -1,6 +1,6 @@
 call plug#begin('~/AppData/Local/nvim/plugged')
 Plug 'neovim/nvim-lspconfig'
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
+
 Plug 'ryanoasis/vim-devicons'
 Plug 'github/copilot.vim'
 " Git
@@ -9,11 +9,13 @@ Plug 'tpope/vim-fugitive'
 Plug 'vim-airline/vim-airline'
 Plug 'zefei/vim-wintabs'
 " Highlight syntax
-Plug 'sheerun/vim-polyglot'
+" Plug 'sheerun/vim-polyglot'
 " Themes
 Plug 'rakr/vim-one'
+
 " Commenting
 Plug 'tpope/vim-commentary' " Support JSX
+
 " Ranger support
 " Plug 'francoiscabrol/ranger.vim'
 " Plug 'rbgrouleff/bclose.vim'
@@ -21,21 +23,29 @@ Plug 'tpope/vim-commentary' " Support JSX
 " lf file manager support
 Plug 'ptzz/lf.vim'
 Plug 'voldikss/vim-floaterm'
+
 " fzf
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
+
 " telescope
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
+
 " terminal
 Plug 'voldikss/vim-floaterm'
+
 " tmux integration
 Plug 'christoomey/vim-tmux-navigator'
+
+" Code formatter and linter
+Plug 'jose-elias-alvarez/null-ls.nvim'
 call plug#end()
 
 set number
 
 " General settings
+set tabstop=4 
 
 " Appearance
 set termguicolors
