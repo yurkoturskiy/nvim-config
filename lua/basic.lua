@@ -1,3 +1,16 @@
+local lsp_formatting = function(bufnr)
+	vim.lsp.buf.format({
+		filter = function(client)
+			-- apply whatever logic you want (in this example, we'll only use null-ls)
+			return client.name == "null-ls"
+		end,
+		bufnr = bufnr,
+	})
+end
+
+-- if you want to set up formatting on save, you can use this as a callback
+local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
+
 -- Use an on_attach function to only map the following keys
 -- after the language server attaches to the current buffer
 local on_attach = function(client, bufnr)
@@ -8,8 +21,7 @@ local on_attach = function(client, bufnr)
 			group = augroup,
 			buffer = bufnr,
 			callback = function()
-				-- on 0.8, you should use vim.lsp.buf.format({ bufnr = bufnr }) instead
-				vim.lsp.buf.formatting_sync()
+				lsp_formatting(bufnr)
 			end,
 		})
 	end
@@ -35,6 +47,12 @@ require("null-ls").setup({
 		require("null-ls").builtins.diagnostics.eslint,
 		require("null-ls").builtins.completion.spell,
 		require("null-ls").builtins.formatting.prettierd,
+		-- tailwind
+		require("null-ls").builtins.formatting.rustywind,
+		-- ruby
+		require("null-ls").builtins.formatting.rufo,
+		-- require("null-ls").builtins.formatting.rubocop,
+		require("null-ls").builtins.diagnostics.rubocop,
 	},
 })
 
@@ -43,7 +61,6 @@ require("lspconfig").gopls.setup({
 })
 require("lspconfig")["tsserver"].setup({
 	on_attach = on_attach,
-	tab_width = 2,
 })
 require("lspconfig").tailwindcss.setup({
 	on_attach = on_attach,
