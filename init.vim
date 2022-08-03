@@ -13,6 +13,9 @@ Plug 'zefei/vim-wintabs'
 " Themes
 Plug 'rakr/vim-one'
 
+" Yank to system clipboard
+Plug 'jabirali/vim-tmux-yank'
+
 " Commenting
 Plug 'tpope/vim-commentary' " Support JSX
 
