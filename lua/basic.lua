@@ -52,7 +52,7 @@ require("null-ls").setup({
 		-- ruby
 		require("null-ls").builtins.formatting.rufo,
 		-- require("null-ls").builtins.formatting.rubocop,
-		require("null-ls").builtins.diagnostics.rubocop,
+		-- require("null-ls").builtins.diagnostics.rubocop,
 	},
 })
 
