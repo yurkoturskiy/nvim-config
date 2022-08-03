@@ -19,10 +19,6 @@ Plug 'jabirali/vim-tmux-yank'
 " Commenting
 Plug 'tpope/vim-commentary' " Support JSX
 
-" Ranger support
-" Plug 'francoiscabrol/ranger.vim'
-" Plug 'rbgrouleff/bclose.vim'
-
 " lf file manager support
 Plug 'ptzz/lf.vim'
 Plug 'voldikss/vim-floaterm'
